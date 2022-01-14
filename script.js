@@ -43,6 +43,41 @@ document.addEventListener("scroll", ()=>{
     }
 })
 
+const getDeviceType = () => {
+    const ua = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+      return "tablet";
+    }
+    if (
+      /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+        ua
+      )
+    ) {
+      return "mobile";
+    }
+    return "desktop";
+};
+
+if(getDeviceType() == "mobile" || getDeviceType() == "tablet"){
+    document.body.hidden = true
+    var e = document.createElement("button")
+    e.style.height = "10vh"
+    e.style.width = "30vh"
+    e.style.borderRadius = "5vh"
+    e.style.background = "black"
+    e.style.border = "white solid"
+    e.style.color = "white"
+    e.style.fontSize = "5vh"
+    e.innerHTML = "View"
+    e.addEventListener("click", ()=>{
+        document.body.hidden = false
+        e.hidden = true
+        document.getElementById("mobileHeader").innerHTML = ""
+    })
+    document.body.insertAdjacentHTML("beforebegin", `<h1 id="mobileHeader"> This site is not for mobiles (Landscape orientation reccomended.) </h1>`)
+    document.body.insertAdjacentElement("beforebegin", e)
+}
+
 async function getFact(){
     var res = await (await fetch("https://betterentrar.gigipopi.repl.co/randomFact")).text()
     document.getElementById("Fact").innerHTML = res
