@@ -1,0 +1,119 @@
+
+@keyframes enlarge2 {
+    from {
+        height: 20vh;
+        width: 80vh;
+        border-radius: 10vh;
+        font-size: 10vh;
+    }
+    to{
+        height: 25vh;
+        width: 90vh;
+        border-radius: 12vh;
+        font-size: 14vh;
+    }
+}
+
+#Heading{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 10vh;
+    font-size: 8vh;
+    background-color: black;
+    color: chartreuse;
+    border-bottom: white solid;
+}
+
+#Coverup1{
+    height: 10vh;
+}
+
+#Heading2{
+    font-size: 8vh;
+}
+
+#Page{
+    margin-top: 10vh;
+}
+
+#Section{
+    height: 90vh;
+    width: 100vh;
+    font-size: 5vh;
+}
+
+
+#Download2{
+    height: 20vh;
+    width: 80vh;
+    border-radius: 10vh;
+    background-color: #5865F2;
+    border: none;
+    color: white;
+    font-size: 10vh;
+}
+
+#Download2:hover{
+    animation: enlarge2 500ms;
+    height: 25vh;
+    width: 90vh;
+    font-size: 14vh;
+    border-radius: 12vh;
+    border: white solid;
+}
+
+::selection{
+    background-color: aqua;
+}
+
+::-webkit-scrollbar{
+    width: 1vw;
+}
+
+::-webkit-scrollbar-track{
+    background-color: black;
+    border: none;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: grey;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #50007F;
+}
+
+footer{
+    bottom: 2vh;
+}
+
+footer button{
+    height: 6vh;
+    width: 16vh;
+    border-radius: 3vh;
+    border-color: white;
+    border-style: solid;
+    font-size: 3vh;
+    background-color: black;
+    color: white;
+}
+
+footer button:hover{
+    border: aqua dashed;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+html{
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
